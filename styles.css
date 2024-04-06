@@ -7,8 +7,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -19,7 +19,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -40,4 +40,51 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+button {
+    background-color: none;
+    padding: 0;
+}
+
+body {
+    background-color: #a5a4ce;
+    font-family: monospace;
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(191, 191, 191);
+}
+
+.windows-box {
+    width: 80%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) rgb(72, 72, 72) rgb(72, 72, 72) rgb(255, 255, 255);
+    background-color: rgb(191, 191, 191);
+}
+
+.windows-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2px;
+    background-color: rgb(7, 0, 127);
+    height: 20px;
+    color: white;
+}
+
+.windows-button {
+    width: 16px;
+    height: 16px;
+    line-height: 0;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) rgb(72, 72, 72) rgb(72, 72, 72) rgb(255, 255, 255);
+    background-color: rgb(191, 191, 191);
 }
