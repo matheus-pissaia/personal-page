@@ -22,6 +22,7 @@ module.exports = {
     extend: {
         borderColor: {
             duotone: '#f9f9f9 #484848 #484848 #f9f9f9',
+            'duotone-active': '#131313 #f9f9f9 #f9f9f9 #131313',
         },
     },
   },
