@@ -6,31 +6,38 @@
 
         <title>Site Pessoal</title>
 
-        <link href="./output.css" rel="stylesheet">
+        <link href="./styles/output.css" rel="stylesheet">
 
         <!-- TODO add favicon -->
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     </head>
 
-    <body class="bg-[#a5a4ce] text-black text-16 font-mono">
+    <body class="bg-[#a5a4ce] text-black text-16 font-mono leading-normal">
         <!-- NAVIGATION -->
         <nav class="fixed bottom-0 left-0 w-full h-8 border-2 border-white bg-gray-300">
             navigation
         </nav>
 
-        <!-- ASIDE CONTENT -->
-        <div class="bg-gray-300 border-2 border-duotone">
-            <div class="flex items-center justify-between px-1 bg-blue h-6 text-white text-14">
+        <div class="window" id="window">
+            <div id="window-top-bar" class="window-top-bar">
                 <span>About me</span>
 
-                <div>
-                    <button class="size-4 leading-[0] bg-gray-300 border-2 border-duotone text-black text-14">
-                        <span>X</span>
+                <div class="flex items-center gap-[2px]">
+                    <button class="window-button">
+                        <span class="block h-[2px] w-[6px] bg-black mt-2 mr-[2px]" />
+                    </button>
+
+                    <button class="window-button">
+                        <span class="box-content h-2 w-2 border border-t-2 border-black" />
+                    </button>
+
+                    <button class="window-button">
+                        <span>x</span>
                     </button>
                 </div>
             </div>
 
-            <aside">
+            <aside class="px-[15%] py-[5%]">
                 <p>Nome: Matheus Pissaia</p>
 
                 <img
