@@ -1,46 +1,31 @@
-const draggableElement = document.getElementById('window')
-const draggableArea = document.getElementById('window-top-bar')
+const body = document.getElementsByTagName('body')[0]
 
-let active = false
-let currentX
-let currentY
-let initialX
-let initialY
-let xOffset = 0
-let yOffset = 0
-
-draggableArea.addEventListener('mousedown', dragStart)
-document.addEventListener('mouseup', dragEnd)
-document.addEventListener('mousemove', drag)
+let activeElement = null
+let offsetX, offsetY;
 
 function dragStart(e) {
-    initialX = e.clientX - xOffset
-    initialY = e.clientY - yOffset
-    if (e.target === draggableArea) {
-        active = true
-    }
+    activeElement = e.target.parentNode
+
+    offsetX = e.clientX - activeElement.offsetLeft
+    offsetY = e.clientY - activeElement.offsetTop
+
+    body.addEventListener('mousemove', drag)
+    body.addEventListener('mouseup', dragEnd)
+
+    e.preventDefault()
 }
 
-function dragEnd(e) {
-    initialX = currentX
-    initialY = currentY
-    active = false
+function dragEnd() {
+    body.removeEventListener('mousemove', drag)
+    body.removeEventListener('mouseup', dragEnd)
+
+    activeElement = null
 }
 
-function drag(e) {
-    if (active) {
-        e.preventDefault()
+function drag(event) {
+    if (!activeElement)
+        return
 
-        currentX = e.clientX - initialX
-        currentY = e.clientY - initialY
-
-        xOffset = currentX
-        yOffset = currentY
-
-        setTranslate(currentX, currentY, draggableElement)
-    }
-}
-
-function setTranslate(xPos, yPos, el) {
-    el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)"
+    activeElement.style.left = `${event.clientX - offsetX}px`
+    activeElement.style.top = `${event.clientY - offsetY}px`
 }
