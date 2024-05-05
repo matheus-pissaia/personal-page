@@ -6,16 +6,28 @@
 
         <title>Site Pessoal</title>
 
-        <link href="./styles/output.css" rel="stylesheet">
+        <link href="./styles/output.css" rel="stylesheet" />
 
         <!-- TODO add favicon -->
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     </head>
 
-    <body class="bg-[#a5a4ce] text-black text-16 font-mono leading-normal [ old-monitor-effect ]">
+    <body
+        class="bg-[#a5a4ce] text-black text-16 font-mono leading-normal [ old-monitor-effect ]"
+    >
         <!-- NAVIGATION -->
-        <nav class="fixed bottom-0 left-0 w-full h-8 border-2 border-white bg-gray-300">
-            navigation
+        <nav
+            class="fixed bottom-0 left-0 flex items-center justify-between w-full p-1 border-2 border-white bg-gray-300"
+        >
+            <button class="base-button px-2 gap-1">
+                <img src="assets/windows-0.png" class="size-6" />
+                <b>Start</b>
+            </button>
+
+            <div class="flex items-center gap-1 px-2 py-1 border-2 border-duotone-active">
+                <img src="assets/loudspeaker_rays-0.png" class="size-4" />
+                <time id="time" class="text-12">--:--:--</time>
+            </div>
         </nav>
 
         <div class="window">
@@ -24,11 +36,15 @@
 
                 <div class="flex items-center gap-[2px]">
                     <button class="window-button">
-                        <span class="block h-[2px] w-[6px] bg-black mt-2 mr-[2px]" />
+                        <span
+                            class="block h-[2px] w-[6px] bg-black mt-2 mr-[2px]"
+                        />
                     </button>
 
                     <button class="window-button">
-                        <span class="box-content h-2 w-2 border border-t-2 border-black" />
+                        <span
+                            class="box-content h-2 w-2 border border-t-2 border-black"
+                        />
                     </button>
 
                     <button class="window-button">
@@ -76,4 +92,5 @@
     </body>
 
     <script src="./scripts/draggable.js"></script>
+    <script src="./scripts/time.js"></script>
 </html>

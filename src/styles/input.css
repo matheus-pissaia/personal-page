@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @layer components {
+    .base-button {
+        @apply inline-flex items-center justify-center
+            bg-gray-300 border-2 border-duotone
+            text-black active:border-duotone-active;
+    }
+
     .window {
         @apply absolute left-[5vw] top-[5%] min-w-[50vw] w-[420px] h-[420px] min-h-[80vh]
             bg-gray-300 border-2 border-duotone;
@@ -14,9 +20,7 @@
     }
 
     .window-button {
-        @apply flex items-center justify-center
-            size-4 bg-gray-300 border-2 border-duotone
-            text-black text-14 select-none active:border-duotone-active;
+        @apply base-button size-4 text-14;
     }
 
     .old-monitor-effect::after {
