@@ -5,18 +5,18 @@
 @layer components {
     .base-button {
         @apply inline-flex items-center justify-center
-            bg-gray-300 border-2 border-duotone
-            text-black active:border-duotone-active;
+            bg-silver shadow-button
+            text-black active:shadow-button-active;
     }
 
     .window {
         @apply absolute left-[5vw] top-[5%] min-w-[50vw] w-[420px] h-[420px] min-h-[80vh]
-            bg-gray-300 border-2 border-duotone;
+            bg-silver p-[3px] shadow-window;
     }
 
-    .window-top-bar {
-        @apply flex items-center justify-between px-[2px]
-            bg-blue text-white text-14;
+    .window-title-bar {
+        @apply flex items-center justify-between p-[3px_2px_3px_3px]
+            bg-navy text-white text-14 font-600 leading-none;
     }
 
     .window-button {

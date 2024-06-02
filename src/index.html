@@ -13,25 +13,25 @@
     </head>
 
     <body
-        class="bg-[#a5a4ce] text-black text-16 font-mono leading-normal [ old-monitor-effect ]"
+        class="bg-cadetblue text-black text-16 font-mono leading-normal [ old-monitor-effect ]"
     >
         <!-- NAVIGATION -->
         <nav
-            class="fixed bottom-0 left-0 flex items-center justify-between w-full p-1 border-2 border-white bg-gray-300"
+            class="fixed bottom-0 left-0 flex items-center justify-between px-1 w-full border-2 border-white bg-silver"
         >
-            <button class="base-button px-2 gap-1">
+            <button class="base-button px-3 gap-1 py-1">
                 <img src="assets/windows-0.png" class="size-6" />
                 <b>Start</b>
             </button>
 
-            <div class="flex items-center gap-1 px-2 py-1 border-2 border-duotone-active">
+            <div class="flex items-center gap-1 px-2 py-1 shadow-button-active">
                 <img src="assets/loudspeaker_rays-0.png" class="size-4" />
                 <time id="time" class="text-12">--:--:--</time>
             </div>
         </nav>
 
         <div class="window">
-            <div class="window-top-bar" onmousedown="dragStart(event)">
+            <div class="window-title-bar" onmousedown="dragStart(event)">
                 <span>About me</span>
 
                 <div class="flex items-center gap-[2px]">
