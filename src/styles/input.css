@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    @font-face {
+        font-family: MS-DOS;
+        src: url(/src/assets/fonts/LessPerfectDOSVGA.woff) format('woff');
+    }
+
+    @keyframes dash {
+        to {
+          stroke-dashoffset: 0;
+        }
+    }
+}
+
 @layer components {
     .base-button {
         @apply inline-flex items-center justify-center
@@ -27,5 +40,31 @@
         @apply content-[''] absolute inset-0
         bg-[linear-gradient(to_bottom,transparent_50%,rgba(0,0,0,.1)_51%)] bg-[length:100%_4px]
         pointer-events-none;
+    }
+
+    .folders {
+        @apply grid grid-cols-1 gap-1;
+
+        button {
+            @apply w-full pr-8 pl-4 py-4 border-2 border-green-500 text-left;
+        }
+
+        button::before {
+            @apply content-['>'] inline-block mr-2;
+        }
+    }
+
+    .files {
+        button {
+            @apply relative w-full border-2 py-2 pl-4 text-left;
+        }
+
+        button::before {
+            @apply content-[''] absolute top-1/2 -translate-y-1/2 -left-8 border-b-2 border-dotted border-green-500 w-4;
+        }
+    }
+
+    .animate-path {
+        @apply [stroke-dasharray:1000] [stroke-dashoffset:1000] animate-[dash_1.5s_forwards]
     }
 }
