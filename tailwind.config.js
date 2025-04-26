@@ -1,9 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ['./src/**/*.{html,js}'],
+    content: [
+        './index.html',
+        './src/**/*.{html,js}'
+    ],
     theme: {
         colors: {
-            white: '#f9f9f9',
+            white: '#C4CCCB',
             silver: 'silver',
             black: '#131313',
             transparent: 'transparent',
@@ -13,12 +16,18 @@ module.exports = {
             },
             navy: 'navy',
             cadetblue: 'cadetblue',
+            green: {
+                500: '#04833C',
+                900: '#061704',
+            },
         },
 
         fontSize: {
             12: '12px',
             14: '14px',
             16: '16px',
+            18: '18px',
+            20: '20px',
         },
 
         fontWeight: {
@@ -36,6 +45,10 @@ module.exports = {
                 window: 'inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff',
                 button: 'inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf',
                 'button-active': 'inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey',
+            },
+
+            fontFamily: {
+                'MS-DOS': ['MS-DOS', 'monospace'],
             },
         },
     },
