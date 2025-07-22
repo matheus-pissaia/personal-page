@@ -7,7 +7,7 @@
                 class="flex items-center justify-between mb-8 px-4 bg-green-500 text-green-900"
             >
                 <span>PERSONAL TERMINAL</span>
-                <time id="time">--:--:--</time>
+                <time id="time">{{ currentTime }}</time>
             </div>
 
             <div class="relative h-full flex items-end gap-16">
@@ -97,3 +97,9 @@
         </div>
     </div>
 </template>
+
+<script setup lang="ts">
+    import { useTime } from './composables/time'
+
+    const { currentTime } = useTime()
+</script>
