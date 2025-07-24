@@ -1,9 +1,4 @@
-/**
- *
- * @param {HTMLElement} fromElement
- * @param {HTMLElement} toElement
- */
-function drawPath(fromElement, toElement) {
+export function drawPath(fromElement: HTMLElement, toElement: HTMLElement) {
     const svgEl = document.getElementById('svgEl')
 
     if (!svgEl)

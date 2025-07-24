@@ -65,6 +65,6 @@
     }
 
     .animate-path {
-        @apply [stroke-dasharray:1000] [stroke-dashoffset:1000] animate-[dash_1.5s_forwards]
+        @apply [stroke-dasharray:1000] [stroke-dashoffset:1000] animate-[dash_.5s_forwards];
     }
 }
