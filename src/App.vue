@@ -1,6 +1,6 @@
 <template>
     <div
-        class="h-screen overflow-hidden bg-green-900 text-white text-20 font-MS-DOS leading-normal [ old-monitor-effect ]"
+        class="h-screen overflow-hidden bg-green-900 text-white text-20 font-Terminal leading-normal [ old-monitor-effect ]"
     >
         <div class="max-w-screen-lg h-full flex flex-col py-4 mx-auto">
             <div
@@ -22,7 +22,9 @@
                 </svg>
 
                 <nav>
-                    <h1 class="text-green-500 text-20">FOLDERS</h1>
+                    <h1 class="text-green-500 text-20">
+                        FOLDERS
+                    </h1>
                     <ul class="[ folders ]">
                         <li>
                             <button
@@ -67,9 +69,7 @@
                     </div>
 
                     <div class="bg-green-500 px-4">
-                        <span class="text-green-900 leading-none"
-                        >ABOUT ME</span
-                        >
+                        <span class="text-green-900 leading-none">ABOUT ME</span>
                     </div>
 
                     <section class="h-full border-2 border-green-500 p-4">
@@ -77,7 +77,7 @@
                             src="https://avatars.githubusercontent.com/u/69802406?v=4"
                             alt="Foto de perfil"
                             class="size-64"
-                        />
+                        >
 
                         <p>Nome: Matheus Pissaia</p>
                         <p>Curso: Sistemas da Informação UFSC</p>

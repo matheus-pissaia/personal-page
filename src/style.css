@@ -4,8 +4,8 @@
 
 @layer base {
     @font-face {
-        font-family: MS-DOS;
-        src: url(/src/assets/fonts/LessPerfectDOSVGA.woff) format('woff');
+        font-family: Terminal;
+        src: url(/src/assets/fonts/Sevastopol-Interface.woff) format('woff');
     }
 
     @keyframes dash {

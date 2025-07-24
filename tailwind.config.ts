@@ -49,7 +49,7 @@ export default {
             },
 
             fontFamily: {
-                'MS-DOS': ['MS-DOS', 'monospace'],
+                'Terminal': ['Terminal', 'monospace'],
             },
         },
     },
