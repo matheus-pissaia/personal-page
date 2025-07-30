@@ -53,5 +53,25 @@ export default {
             },
         },
     },
-    plugins: [],
+    plugins: [
+        {
+            handler: ({ addComponents }) => {
+                addComponents({
+                    '.chromatic-aberration': {
+                        textShadow: `
+                            0.1rem 0 0.05rem rgba(0, 0, 255, 0.6),
+                            -0.05rem 0.05rem 0.05rem rgba(255, 0, 255, 0.6),
+                            -0.05rem -0.05rem 0.05rem rgba(0, 255, 0, 0.6)
+                        `,
+                    },
+                    '.absolute-center': {
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                    },
+                })
+            }
+        }
+    ],
 } satisfies Config
