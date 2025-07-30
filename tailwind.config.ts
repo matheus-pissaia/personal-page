@@ -41,17 +41,6 @@ export default {
         },
 
         extend: {
-            borderColor: {
-                duotone: '#f9f9f9 #484848 #484848 #f9f9f9',
-                'duotone-active': '#131313 #f9f9f9 #f9f9f9 #131313',
-            },
-
-            boxShadow: {
-                window: 'inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff',
-                button: 'inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf',
-                'button-active': 'inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey',
-            },
-
             fontFamily: {
                 'Terminal': ['Terminal', 'monospace'],
             },
