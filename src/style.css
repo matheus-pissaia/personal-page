@@ -41,30 +41,4 @@
         bg-[linear-gradient(to_bottom,transparent_50%,rgba(0,0,0,.1)_51%)] bg-[length:100%_4px]
         pointer-events-none;
     }
-
-    .folders {
-        @apply grid grid-cols-1 gap-1;
-
-        button {
-            @apply w-full pr-8 pl-4 py-4 border-2 border-green-500 text-left;
-        }
-
-        button::before {
-            @apply content-['>'] inline-block mr-2;
-        }
-    }
-
-    .files {
-        button {
-            @apply relative w-full border-2 py-2 pl-4 text-left;
-        }
-
-        button::before {
-            @apply content-[''] absolute top-1/2 -translate-y-1/2 -left-8 border-b-2 border-dotted border-green-500 w-4;
-        }
-    }
-
-    .animate-path {
-        @apply [stroke-dasharray:1000] [stroke-dashoffset:1000] animate-[dash_.5s_forwards];
-    }
 }
