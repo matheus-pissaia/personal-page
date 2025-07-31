@@ -107,8 +107,8 @@
         selectedFolder.value = folder
 
         nextTick(() => {
-            // Update both refs on next tick so we dont retrigger the
-            // `FolderLine` component twice
+            // Wait for DOM to update to then update both refs on next tick so
+            // we dont trigger the `FolderLine` component twice
             folderElement.value = event.target as HTMLElement
             firstFileButton.value = fileButtons.value?.[0]?.$el
         })
