@@ -93,7 +93,7 @@
     const fileButtons = useTemplateRef('fileButtons')
 
     const selectedFile = ref<string | null>(null)
-    const selectedFolder = ref<Folder>(folders.ABOUT)
+    const selectedFolder = ref<Folder | null>(null)
     const folderElement = shallowRef<HTMLElement | null>(null)
     const firstFileButton = ref<HTMLElement | null>(null)
 
