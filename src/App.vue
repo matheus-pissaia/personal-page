@@ -3,13 +3,7 @@
         class="h-screen overflow-hidden bg-green-900 text-white text-20 font-Terminal leading-normal [ old-monitor-effect ]"
     >
         <div class="max-w-screen-lg max-h-full py-4 mx-auto">
-            <div
-                class="flex items-center justify-between mb-10 px-4 bg-green-500
-                text-28 text-green-900 leading-none"
-            >
-                <span>PERSONAL TERMINAL</span>
-                <time id="time">{{ currentTime }}</time>
-            </div>
+            <TopBar />
 
             <div class="relative max-h-full grid grid-cols-[auto_1fr] gap-16">
                 <FolderLine :from-element="folderElement" :to-element="firstFileButton" />
@@ -85,11 +79,10 @@
     import FileButton from './components/FileButton.vue'
     import FolderButton from './components/FolderButton.vue'
     import GitHub from './components/GitHub.vue'
-    import { useTime } from './composables/time'
+    import TopBar from './components/TopBar.vue'
     import FolderLine from './components/FolderLine.vue'
     import { folders, type Folder, filesByFolder } from './assets/constants'
 
-    const { currentTime } = useTime()
     const fileButtons = useTemplateRef('fileButtons')
 
     const selectedFile = ref<string | null>(null)
