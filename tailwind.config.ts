@@ -63,6 +63,15 @@ export default {
                         left: '50%',
                         transform: 'translate(-50%, -50%)',
                     },
+                    '.bloom-effect': {
+                        boxShadow: `
+                            -64px 0 16px -2px theme('colors.white/2%'),
+                            -32px 0 16px -2px theme('colors.white/3%'),
+                            32px 0 16px -2px theme('colors.white/3%'),
+                            64px 0 16px -2px theme('colors.white/2%'),
+                            0 0 16px -8px theme('colors.white/75%')
+                        `,
+                    },
                 })
             }
         }
