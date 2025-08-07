@@ -3,8 +3,8 @@
         <button
             class="[ folder-button ]"
             :class="{
-                '[ folder-button-selected bloom-effect ]': selected,
-                'border-green-500 hover:bg-white hover:border-white hover:text-green-900 hover:bloom-effect': !selected,
+                '[ folder-button-selected ] bloom-effect text-bloom': selected,
+                'border-green-500 text-bloom hover:bg-white hover:border-white hover:text-green-900 hover:bloom-effect hover:[text-shadow:none]': !selected,
             }"
         >
             <slot />

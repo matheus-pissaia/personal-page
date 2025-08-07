@@ -72,6 +72,15 @@ export default {
                             0 0 16px -8px theme('colors.white/75%')
                         `,
                     },
+                    '.text-bloom': {
+                        textShadow: `
+                            12px 0 .5rem theme('colors.white/10%'),
+                            24px 0 .5rem theme('colors.white/5%'),
+                            -12px 0 .5rem theme('colors.white/10%'),
+                            -24px 0 .5rem theme('colors.white/5%'),
+                            0 0 .3rem theme('colors.white/20%')
+                        `,
+                    }
                 })
             }
         }
