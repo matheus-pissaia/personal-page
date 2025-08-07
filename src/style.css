@@ -7,12 +7,6 @@
         font-family: Terminal;
         src: url(/src/assets/fonts/Sevastopol-Interface.woff) format('woff');
     }
-
-    @keyframes dash {
-        to {
-          stroke-dashoffset: 0;
-        }
-    }
 }
 
 @layer components {
