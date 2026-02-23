@@ -7,6 +7,10 @@
         font-family: Terminal;
         src: url(/src/assets/fonts/Sevastopol-Interface.woff) format('woff');
     }
+
+    body {
+        @apply bg-green-900;
+    }
 }
 
 @layer components {
