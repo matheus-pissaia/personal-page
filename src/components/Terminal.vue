@@ -1,8 +1,8 @@
 <template>
-    <div class="max-w-screen-lg max-h-full py-4 mx-auto">
+    <div class="w-full max-w-screen-lg h-full grid grid-rows-[auto_1fr] gap-10 py-4 mx-auto">
         <TopBar />
 
-        <div class="relative max-h-full grid grid-cols-[auto_1fr] gap-16">
+        <div class="relative h-full grid grid-cols-[auto_1fr] gap-16">
             <FolderLine :from-element="folderElement" :to-element="firstFileButton" />
 
             <nav>
@@ -21,7 +21,7 @@
                 </ul>
             </nav>
 
-            <div class="flex flex-col">
+            <div class="max-h-full flex flex-col">
                 <!--
                     Pass key to force re-render every time the selected
                     folder changes to update `fileButtons` ref
@@ -38,13 +38,8 @@
                     </FileButton>
                 </div>
 
-                <template v-if="selectedFile">
-                    <div class="h-6 bg-green-500" />
-
-                    <main
-                        class="overflow-y-auto flex-auto max-h-auto p-4
-                        border-2 border-green-500 text-28 leading-tight"
-                    >
+                <div v-if="selectedFile" class="h-full relative border-2 border-t-[20px] border-green-500">
+                    <main class="absolute inset-0 overflow-y-auto p-4 text-28 leading-tight">
                         <img
                             src="https://avatars.githubusercontent.com/u/69802406?v=4"
                             alt="Foto de perfil"
@@ -66,7 +61,7 @@
                             <span>GitHub</span>
                         </a>
                     </main>
-                </template>
+                </div>
             </div>
         </div>
     </div>
