@@ -30,25 +30,25 @@
 
 <style>
     .animated-bar {
-        animation: fill 5s step-start forwards;
+        animation: fill 4s step-start forwards;
         animation-delay: 1s;
     }
 
     @keyframes fill {
-        0%, 15% {
+        0%, 10% {
             width: 0%;
         }
 
         40% {
-            width: 20%;
+            width: 50%;
         }
 
         55% {
-            width: 47%;
+            width: 66%;
         }
 
         65% {
-            width: 71%;
+            width: 80%;
         }
 
         80%, 90% {
