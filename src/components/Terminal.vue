@@ -39,27 +39,16 @@
                 </div>
 
                 <div v-if="selectedFile" class="h-full relative border-2 border-t-[20px] border-green-500">
-                    <main class="absolute inset-0 overflow-y-auto p-4 text-28 leading-tight">
-                        <img
-                            src="https://avatars.githubusercontent.com/u/69802406?v=4"
-                            alt="Foto de perfil"
-                            class="size-64"
-                        >
+                    <main
+                        class="absolute inset-0 overflow-y-auto
+                            p-6 text-28 leading-tight text-bloom
+                            [mask:linear-gradient(to_bottom,transparent,white_4%,white_96%,transparent)]"
+                    >
+                        <p v-if="!selectedFileComponent">
+                            CONTENT UNAVAILABLE
+                        </p>
 
-                        <p>Nome: Matheus Pissaia</p>
-                        <p>Curso: Sistemas da Informação | UFSC</p>
-                        <p>Linguagens e tecnologias: TODO</p>
-
-                        <a
-                            href="https://github.com/matheus-pissaia"
-                            title="GitHub"
-                            target="_blank"
-                            rel="noopener"
-                            class="flex items-center gap-2 leading-none"
-                        >
-                            <GitHub />
-                            <span>GitHub</span>
-                        </a>
+                        <component :is="selectedFileComponent" v-else />
                     </main>
                 </div>
             </div>
@@ -71,10 +60,9 @@
     import { computed, nextTick, ref, shallowRef, useTemplateRef } from 'vue'
     import FileButton from './FileButton.vue'
     import FolderButton from './FolderButton.vue'
-    import GitHub from './GitHub.vue'
     import TopBar from './TopBar.vue'
     import FolderLine from './FolderLine.vue'
-    import { folders, type Folder, filesByFolder } from '../assets/constants'
+    import { folders, type Folder, filesByFolder, fileComponentsByFolder } from './Tabs'
 
     const fileButtons = useTemplateRef('fileButtons')
 
@@ -85,6 +73,13 @@
     const folderElement = shallowRef<HTMLElement | null>(null)
 
     const availableFolderFiles = computed(() => selectedFolder.value && filesByFolder[selectedFolder.value])
+
+    const selectedFileComponent = computed(() => {
+        if (!selectedFolder.value || !selectedFile.value)
+            return null
+
+        return fileComponentsByFolder[selectedFolder.value][selectedFile.value]
+    })
 
     async function handleSelectFolder(folder: Folder, event: MouseEvent) {
         if (folder === selectedFolder.value)
