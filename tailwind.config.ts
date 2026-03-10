@@ -7,7 +7,7 @@ export default {
     ],
     theme: {
         colors: {
-            white: '#C4CCCB',
+            white: '#e6e6e6',
             silver: 'silver',
             black: '#131313',
             transparent: 'transparent',
@@ -18,7 +18,7 @@ export default {
             navy: 'navy',
             cadetblue: 'cadetblue',
             green: {
-                500: '#04833C',
+                500: '#07A84B',
                 900: '#061704',
             },
         },
@@ -50,13 +50,6 @@ export default {
         {
             handler: ({ addComponents }) => {
                 addComponents({
-                    '.chromatic-aberration': {
-                        textShadow: `
-                            0.1rem 0 0.05rem rgba(0, 0, 255, 0.6),
-                            -0.05rem 0.05rem 0.05rem rgba(255, 0, 255, 0.6),
-                            -0.05rem -0.05rem 0.05rem rgba(0, 255, 0, 0.6)
-                        `,
-                    },
                     '.absolute-center': {
                         position: 'absolute',
                         top: '50%',
