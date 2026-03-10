@@ -18,31 +18,16 @@
         </p>
 
         <p>
-            I mainly work with TypeScript, Vue/Nuxt and Node.js, but I also have
-            experience with other languages and frameworks like C, SQL, Python,
-            React, Hardhat and Solidity.
+            I mainly work with TypeScript, Vue/Nuxt, Tailwind and Node.js, but I
+            also have experience with other languages and frameworks like C, SQL,
+            Python, React, Hardhat and Solidity.
         </p>
 
         <p>
             In my spare time I like DJing (just for myself and close friends of
             course) and playing video games! I don't know if you can tell but
             this website is inspired by one... (check out the
-            "ABOUT THIS WEBSITE" for more info).
+            <u>ABOUT THIS WEBSITE</u> for more info).
         </p>
-
-        <!-- <a
-            href="https://github.com/matheus-pissaia"
-            title="GitHub"
-            target="_blank"
-            rel="noopener"
-            class="flex items-center gap-2 leading-none"
-        >
-            <GitHub />
-            <span>GitHub</span>
-        </a> -->
     </div>
 </template>
-
-<script setup lang="ts">
-    // import GitHub from '../../GitHub.vue'
-</script>
