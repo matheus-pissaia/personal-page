@@ -1,4 +1,4 @@
-import AboutMe from './AboutMe.vue'
+import WhoAmI from './WhoAmI.vue'
 import AboutThisWebsite from './AboutThisWebsite.vue'
 
-export { AboutMe, AboutThisWebsite }
+export { WhoAmI, AboutThisWebsite }

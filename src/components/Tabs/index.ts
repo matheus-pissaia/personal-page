@@ -1,5 +1,5 @@
 import type { Component } from 'vue'
-import { AboutMe, AboutThisWebsite } from './About'
+import { WhoAmI, AboutThisWebsite } from './About'
 
 export const folders = {
     ABOUT: 'ABOUT',
@@ -12,7 +12,7 @@ export type Folder = typeof folders[keyof typeof folders]
 
 export const fileComponentsByFolder: Record<Folder, Record<string, Component | null>> = {
     [folders.ABOUT]: {
-        'ABOUT ME': AboutMe,
+        'WHO AM I?': WhoAmI,
         'ABOUT THIS WEBSITE': AboutThisWebsite,
     },
     [folders.POSTS]: {
