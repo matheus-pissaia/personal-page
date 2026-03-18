@@ -41,7 +41,7 @@
                 <div v-if="selectedFile" class="h-full relative border-2 border-t-[20px] border-green-500">
                     <main
                         class="absolute inset-0 overflow-y-auto
-                            p-6 text-28 leading-tight text-bloom
+                            p-6 pb-64 text-28 leading-tight text-bloom
                             [mask:linear-gradient(to_bottom,transparent,white_4%,white_96%,transparent)]"
                     >
                         <p v-if="!selectedFileComponent">
