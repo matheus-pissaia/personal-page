@@ -8,15 +8,8 @@ export default {
     theme: {
         colors: {
             white: '#e6e6e6',
-            silver: 'silver',
             black: '#131313',
             transparent: 'transparent',
-            gray: {
-                300: '#bfbfbf',
-                600: '#484848',
-            },
-            navy: 'navy',
-            cadetblue: 'cadetblue',
             green: {
                 500: '#07A84B',
                 900: '#061704',
