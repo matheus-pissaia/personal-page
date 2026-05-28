@@ -40,6 +40,7 @@
 
                 <div v-if="selectedFile" class="h-full relative border-2 border-t-[20px] border-green-500">
                     <main
+                        ref="mainContent"
                         class="absolute inset-0 overflow-y-auto
                             p-6 pb-64 text-28 leading-tight text-bloom
                             [mask:linear-gradient(to_bottom,transparent,white_4%,white_96%,transparent)]"
@@ -57,7 +58,7 @@
 </template>
 
 <script setup lang="ts">
-    import { computed, nextTick, ref, shallowRef, useTemplateRef } from 'vue'
+    import { computed, nextTick, ref, shallowRef, useTemplateRef, watch } from 'vue'
     import FileButton from './FileButton.vue'
     import FolderButton from './FolderButton.vue'
     import TopBar from './TopBar.vue'
@@ -65,6 +66,7 @@
     import { folders, type Folder, filesByFolder, fileComponentsByFolder } from './Tabs'
 
     const fileButtons = useTemplateRef('fileButtons')
+    const mainContent = useTemplateRef('mainContent')
 
     const selectedFile = ref<string | null>(null)
     const firstFileButton = ref<HTMLElement | null>(null)
@@ -95,4 +97,10 @@
             firstFileButton.value = fileButtons.value?.[0]?.$el
         })
     }
+
+    // Reset scroll when selected file changes
+    watch(selectedFile, (newFile, oldFile) => {
+        if (newFile && newFile !== oldFile)
+            mainContent.value?.scrollTo({ top: 0 })
+    })
 </script>
