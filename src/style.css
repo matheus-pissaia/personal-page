@@ -12,6 +12,10 @@
         @apply bg-green-900;
     }
 
+    ::selection {
+        @apply bg-green-500 text-black;
+    }
+
     ::-webkit-scrollbar {
         @apply appearance-none;
     }
