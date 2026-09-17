@@ -1,13 +1,17 @@
 import { onMounted, onUnmounted, ref } from 'vue'
 
+function getCurrentTimeString() {
+    return new Date().toLocaleTimeString('pt-BR')
+}
+
 export function useTime() {
     let intervalId: number | null = null
 
-    const currentTime = ref(new Date().toLocaleTimeString())
+    const currentTime = ref(getCurrentTimeString())
 
     function startTime() {
         intervalId = setInterval(
-            () => currentTime.value = new Date().toLocaleTimeString(),
+            () => currentTime.value = getCurrentTimeString(),
             1000
         )
     }
